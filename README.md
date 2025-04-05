@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Bicep Curls Reps Counter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Een React-gebaseerde webapplicatie die bicep curls detecteert en het aantal herhalingen automatisch telt met behulp van MediaPipe en TensorFlow.js.
 
-## Available Scripts
+## 🎯 Doel
 
-In the project directory, you can run:
+Deze applicatie helpt gebruikers bij het uitvoeren van bicep curls door:
+- Realtime pose-detectie met MediaPipe
+- Automatische telling van herhalingen
+- Visuele feedback over de juiste uitvoering
+- Een leaderboard om prestaties bij te houden
 
-### `npm start`
+## 🚀 Installatie
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone de repository:
+```bash
+git clone [repository-url]
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Installeer de dependencies:
+```bash
+npm install
+```
 
-### `npm test`
+3. Start de applicatie:
+```bash
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+De applicatie is nu beschikbaar op [http://localhost:3000](http://localhost:3000)
 
-### `npm run build`
+## 💻 Gebruik
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+De applicatie bestaat uit drie hoofdfuncties:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Data Verzamelen**
+   - Verzamel pose data voor "arm omhoog" en "arm omlaag" posities
+   - Minimaal 20 voorbeelden per pose worden aanbevolen
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Model Trainen**
+   - Upload de verzamelde JSON bestanden
+   - Train het model met de geüploade data
+   - Bekijk de training resultaten en accuracy
 
-### `npm run eject`
+3. **App Gebruiken**
+   - Voer je naam in
+   - Start met het uitvoeren van bicep curls
+   - Zie realtime feedback en je aantal herhalingen
+   - Bekijk je positie op het leaderboard
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Technologieën
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React
+- MediaPipe voor pose-detectie
+- TensorFlow.js voor machine learning
+- Tailwind CSS voor styling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Projectstructuur
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/
+│   ├── DataCollector.js    # Data verzamelen
+│   ├── TrainModel.js       # Model training
+│   ├── PoseDetector.js     # Pose detectie
+│   └── RepsCounter.js      # Herhalingen tellen
+├── App.js                  # Hoofdcomponent
+└── index.js               # Applicatie startpunt
+```
 
-## Learn More
+## 🔧 Ontwikkeling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Beschikbare Scripts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm start`: Start de ontwikkelingsserver
+- `npm run build`: Bouwt de productieversie
+- `npm test`: Start de test runner
 
-### Code Splitting
+## 📝 Licentie
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dit project is gelicenseerd onder de MIT License - zie het [LICENSE](LICENSE) bestand voor details.
