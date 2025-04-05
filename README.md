@@ -76,6 +76,3 @@ src/
 - `npm run build`: Bouwt de productieversie
 - `npm test`: Start de test runner
 
-## 📝 Licentie
-
-Dit project is gelicenseerd onder de MIT License - zie het [LICENSE](LICENSE) bestand voor details.
