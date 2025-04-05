@@ -14,7 +14,7 @@ Deze applicatie helpt gebruikers bij het uitvoeren van bicep curls door:
 
 1. Clone de repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/JoshuaLevi/PRG09-Posing
 ```
 
 2. Installeer de dependencies:
